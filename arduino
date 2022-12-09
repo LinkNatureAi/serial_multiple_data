@@ -1,0 +1,45 @@
+#include <SoftwareSerial.h> //arduino tansfer
+SoftwareSerial ard(11, 12); // RX, TX
+
+int data1, data2, data3, data4; 
+float data5, data6, data7, data8;
+String  data9, data10, data11, data12;
+
+void setup(){
+Serial.begin(115200);
+ard.begin(9600); }
+
+void loop(){
+
+data1=800;
+data2=900;
+data3=1000;
+data4=10000;
+
+data5=12.12345;
+data6=123.1234;
+data7=1234.123;
+data8=12345.12;
+
+data9= "youtube";
+data10="google";
+data11="subscriber";
+data12="my";
+
+ard.print(data1);     ard.print("A");
+ard.print(data2);     ard.print("B");
+ard.print(data3);     ard.print("C");
+ard.print(data4);     ard.print("D");
+ard.print(data5,5);   ard.print("E");
+ard.print(data6,4);   ard.print("F");
+ard.print(data7,3);   ard.print("G");
+ard.print(data8,2);   ard.print("H");
+ard.print(data9);     ard.print("I");
+ard.print(data10);    ard.print("J");
+ard.print(data11);    ard.print("K");
+ard.print(data12);    ard.print("L");
+ard.print("\n");
+ 
+ delay(50); //thoda delay taranfer m jaruri h
+ 
+  }  
